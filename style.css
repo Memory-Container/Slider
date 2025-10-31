@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Typewriter";
+}
+@font-face {
+    font-family: "Typewriter";
+    src: url("./MonospaceTypewriter.ttf");
+}
+:root {
+    --c-height: 400px;
+    --c-width: 350px;
+    --power: #20833b;
+    --infinity: #f39000;
+    --time: #9a27ad;
+    --replication: #0793d3;
+    --dilation: #4fa718;
+    --reality: #fff45c;
+}
+body {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.slider {
+    scrollbar-width: none;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    align-items: center;
+    width: calc(var(--c-width) + 25px);
+    display: flex;
+    flex-direction: row;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    gap: 150px;
+    
+}
+
+.card {
+    scroll-snap-align: center;
+    padding: 40px 7px 40px ;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 50px;
+    user-select: none;
+    border-radius: 10px;
+    min-width: var(--c-width);
+    min-height: var(--c-height);
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid wheat;
+    margin: 0 15px;
+}
+.box {
+    display: flex;
+    flex-direction:column;
+    font-size: 15px;
+    text-align: center;
+    justify-content: top;
+}
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid;
+    border-radius: 5px;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 15px;
+}
+.name {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.description {
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+.effect {
+    font-size: 12px;
+    border-bottom: 1px solid;
+    padding: 5px;
+}
+.title {
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+#power {
+    border: 2px solid var(--power);
+    color: var(--power);
+    background: linear-gradient(to top, transparent, var(--power) 250%);
+    .icon {
+        border-color: var(--power);
+        color: var(--power);
+        text-shadow: 0 0 4px var(--power);
+    }
+}
+#infinity {
+    border: 2px solid var(--infinity);
+    background: linear-gradient(to top, transparent, var(--infinity) 250%);
+    color: var(--infinity);
+    .icon {
+        border-color: var(--infinity);
+        color: var(--infinity);
+        text-shadow: 0 0 4px var(--infinity);
+    }
+}
+#time {
+    border: 2px solid var(--time);
+    background: linear-gradient(to top, transparent, var(--time) 250%);
+    color: var(--time);
+    .icon {
+        border-color: var(--time);
+        color: var(--time);
+        text-shadow: 0 0 4px var(--time);
+    }
+}
+#replication {
+    border: 2px solid var(--replication);
+    background: linear-gradient(to top, transparent, var(--replication) 250%);
+    color: var(--replication);
+    .icon {
+        border-color: var(--replication);
+        color: var(--replication);
+        text-shadow: 0 0 4px var(--replication);
+    }
+}
+#dilation {
+    border: 2px solid var(--dilation);
+    background: linear-gradient(to top, transparent, var(--dilation) 250%);
+    color: var(--dilation);
+    .icon {
+        border-color: var(--dilation);
+        color: var(--dilation);
+        text-shadow: 0 0 4px var(--dilation);
+    }
+}
+#reality {
+    border: 2px solid var(--reality);
+    background: linear-gradient(to top, transparent, var(--reality) 250%);
+    color: var(--reality);
+    .icon {
+        border-color: var(--reality);
+        color: var(--reality);
+        text-shadow: 0 0 4px var(--reality);
+    }
+}
+.arrow {
+    font-size: 15px;
+    font-weight: bold;;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: 2px solid white;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.536);
+    font-family: "Inter";
+    border-radius: 5px;
+    transition: 0.25s;
+}
+.arrow:hover {
+    color: rgb(255, 255, 255);
+}
+.mover {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(128, 128, 128, 0.458);
+    transition: 0.25s;
+}
+.bar {
+    width: calc(var(--c-width) - 40px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.active {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px 1px rgba(128, 128, 128, 0.644);
+}
