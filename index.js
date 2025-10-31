@@ -32,7 +32,7 @@ function backward(x = 1) {
   }
   indicator[current - 1].classList.add("active")
   indicator[current].classList.remove("active")
-  current = current < 0 ? current - 1 : 5;
+  current = current > 0 ? current - 1 : 5;
   container.scrollBy(-100 * x, 0);
 }
 function scroll(x) {
